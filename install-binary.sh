@@ -3,7 +3,7 @@
 # Script from https://github.com/technosophos/helm-template
 
 PROJECT_NAME="helm-opa"
-PROJECT_GH="eicnix/$PROJECT_NAME"
+PROJECT_GH="shift/$PROJECT_NAME"
 
 : ${HELM_PLUGIN_PATH:="$(helm home)/plugins/helm-template"}
 
