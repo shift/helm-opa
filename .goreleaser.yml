@@ -1,0 +1,63 @@
+dist: releases
+release:
+  github:
+    owner: shift
+    name: helm-opa
+  extra_files:
+    - glob: ./cosign.pub
+builds:
+  - id: default
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+      - arm
+    goarm:
+      - "7"
+    ignore:
+      - goos: windows
+        goarch: arm64
+      - goos: windows
+        goarch: arm
+      - goos: darwin
+        goarch: arm
+    ldflags:
+      - -s
+      - -w
+      - -X '{{ .ModulePath }}/pkg/common.SUMMARY={{ .Version }}'
+      - -X '{{ .ModulePath }}/pkg/common.BRANCH={{ .Branch }}'
+      - -X '{{ .ModulePath }}/pkg/common.COMMIT={{ .Commit }}'
+archives:
+  - id: default
+    builds:
+      - default
+    name_template: "{{ .ProjectName }}-v{{ .Version }}-{{ .Os }}-{{ .Arch }}{{ .Arm }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+      
+
+
+
+
+signs:
+  - cmd: cosign
+    stdin: "{{ .Env.COSIGN_PASSWORD }}"
+    args:
+      ["sign-blob", "--key=cosign.key", "--output=${signature}", "${artifact}"]
+    artifacts: all
+checksum:
+  name_template: "checksums.txt"
+snapshot:
+  name_template: '{{ trimprefix .Summary "v" }}'
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
