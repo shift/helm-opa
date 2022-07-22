@@ -4,6 +4,11 @@ name: "opa"
 version: "2.5.1+2"
 usage: "opa <path to chart>"
 description: "Checks rendered charts against OPA policies"
-command: "$HELM_PLUGIN_DIR/opa"
+command: "$HELM_PLUGIN_DIR/helm-opa"
+
 hooks:
-  install: "$HELM_PLUGIN_DIR/install-binary.sh"
+  install: "cd $HELM_PLUGIN_DIR; ./scripts/install.sh"
+  update: "cd $HELM_PLUGIN_DIR; ./scripts/install.sh"
+
+useTunnel: false
+ignoreFlags: false
