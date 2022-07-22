@@ -10,14 +10,22 @@ if [[ $osArchitecture == *'aarch'* || $osArchitecture == *'arm'* ]]; then
     osArchitecture='arm64'
 fi
 
-DOWNLOAD_URL=$(curl --silent "https://api.github.com/repos/shift/helm-opa/releases/latest" | grep -o "browser_download_url.*\_${osName}_${osArchitecture}.zip")
+if [[ $osName == "Linux" ]]; then
+  osName='linux'
+fi
+
+if [[ $osArchitecture == 'x86_64' ]]; then
+  osArchitecture='amd64'
+fi
+
+DOWNLOAD_URL=$(curl --silent "https://api.github.com/repos/shift/helm-opa/releases/latest" | grep -m 1 -o "browser_download_url.*\-${osName}-${osArchitecture}.tar.gz")
 
 DOWNLOAD_URL=${DOWNLOAD_URL//\"}
 DOWNLOAD_URL=${DOWNLOAD_URL/browser_download_url: /}
 
 echo $DOWNLOAD_URL
 OUTPUT_BASENAME=helm-opa
-OUTPUT_BASENAME_WITH_POSTFIX=$OUTPUT_BASENAME.zip
+OUTPUT_BASENAME_WITH_POSTFIX=$OUTPUT_BASENAME.tar.gz
 
 if [ "$DOWNLOAD_URL" = "" ]
 then
@@ -33,7 +41,7 @@ else
     exit -1
 fi
 
-rm -rf bin && mkdir bin && unzip $OUTPUT_BASENAME_WITH_POSTFIX -d bin > /dev/null && rm -f $OUTPUT_BASENAME_WITH_POSTFIX
+rm -rf bin && mkdir bin && tar xfv $OUTPUT_BASENAME_WITH_POSTFIX > /dev/null && rm -f $OUTPUT_BASENAME_WITH_POSTFIX
 
 echo "helm-opa is installed."
 echo
