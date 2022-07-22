@@ -6,7 +6,7 @@ require (
 	github.com/ghodss/yaml v1.0.0
 	github.com/open-policy-agent/opa v0.42.2
 	github.com/spf13/cobra v1.5.0
-	helm.sh/helm/v3 v3.9.1
+	helm.sh/helm/v3 v3.9.2
 )
 
 require (
