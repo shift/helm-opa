@@ -1,5 +1,5 @@
 #! /bin/bash -e
-set -x
+
 cd $HELM_PLUGIN_DIR
 echo "Installing helm-opa..."
 
@@ -41,7 +41,7 @@ else
     exit -1
 fi
 
-rm -rf bin && mkdir bin && tar xfv $OUTPUT_BASENAME_WITH_POSTFIX > /dev/null && rm -f $OUTPUT_BASENAME_WITH_POSTFIX
+tar xfv $OUTPUT_BASENAME_WITH_POSTFIX helm-opa > /dev/null && rm -f $OUTPUT_BASENAME_WITH_POSTFIX
 
 echo "helm-opa is installed."
 echo
