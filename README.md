@@ -1,5 +1,6 @@
 # Helm  [OPA](https://www.openpolicyagent.org/) Plugin
-[![CircleCI](https://circleci.com/gh/eicnix/helm-opa.svg?style=svg)](https://circleci.com/gh/eicnix/helm-opa)
+
+Now with Helm v3 support.
 
 This plugin enables you to check your rendered templates files again [Open Policy Agent](https://www.openpolicyagent.org/) policies to ensure that they match your policies.
 
@@ -31,7 +32,7 @@ Result: Chart is not compliant
 ## Install
 
 ```sh
-$ helm plugin install https://github.com/eicnix/helm-opa
+$ helm plugin install https://github.com/shift/helm-opa
 ```
 
 ## License

@@ -14,10 +14,9 @@ import (
 	"github.com/open-policy-agent/opa/ast"
 	"github.com/open-policy-agent/opa/rego"
 	"github.com/spf13/cobra"
-	"k8s.io/helm/pkg/chartutil"
-	"k8s.io/helm/pkg/engine"
-	"k8s.io/helm/pkg/proto/hapi/chart"
-	"k8s.io/helm/pkg/timeconv"
+	"helm.sh/helm/v3/pkg/chart/loader"
+	"helm.sh/helm/v3/pkg/chartutil"
+	"helm.sh/helm/v3/pkg/engine"
 )
 
 const globalUsage = `
@@ -52,28 +51,26 @@ func run(cmd *cobra.Command, args []string) error {
 	if len(args) < 1 {
 		return errors.New("chart is required")
 	}
-	c, err := chartutil.Load(args[0])
+	c, err := loader.LoadDir(args[0])
 	if err != nil {
 		return err
 	}
-
-	vv, err := yaml.Marshal(map[string]interface{}{})
-	config := &chart.Config{Raw: string(vv), Values: map[string]*chart.Value{}}
+	var values chartutil.Values
 
 	options := chartutil.ReleaseOptions{
 		Name:      "RELEASE",
-		Time:      timeconv.Now(),
+		Revision:  1,
 		Namespace: "NAMESPACE",
+		IsInstall: true,
+		IsUpgrade: true,
 	}
 
-	renderer := engine.New()
-
-	vals, err := chartutil.ToRenderValues(c, config, options)
+	vals, err := chartutil.ToRenderValues(c, values, options, nil)
 	if err != nil {
 		return err
 	}
 
-	out, err := renderer.Render(c, vals)
+	out, err := engine.Render(c, vals)
 	if err != nil {
 		return err
 	}
