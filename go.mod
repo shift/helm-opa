@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/ghodss/yaml v1.0.0
 	github.com/open-policy-agent/opa v0.51.0
-	github.com/spf13/cobra v1.6.1
+	github.com/spf13/cobra v1.7.0
 	helm.sh/helm/v3 v3.11.2
 )
 
@@ -35,7 +35,7 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/huandu/xstrings v1.4.0 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
-	github.com/inconshreveable/mousetrap v1.0.1 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mailru/easyjson v0.7.6 // indirect
