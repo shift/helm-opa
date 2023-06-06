@@ -846,6 +846,8 @@ github.com/open-policy-agent/opa v0.52.0 h1:Rv3F+VCDqsufaiYy/3S9/Iuk0yfcREK4iZmW
 github.com/open-policy-agent/opa v0.52.0/go.mod h1:2n99s7WY/BXZUWUOq10JdTgK+G6XM4FYGoe7kQ5Vg0s=
 github.com/open-policy-agent/opa v0.53.0 h1:zC/0sI+Gof5/oiFNS3DmoJa11D0m0InZeDhZyzi+l6E=
 github.com/open-policy-agent/opa v0.53.0/go.mod h1:j3wl8FqSz/+u33Scl72Ms2wxkZx4yZPdqSCrOqBqdsA=
+github.com/open-policy-agent/opa v0.53.1 h1:APN8iA7Txgel13kSkc6S8dbUulydiPojXt6iyubmB7Q=
+github.com/open-policy-agent/opa v0.53.1/go.mod h1:j3wl8FqSz/+u33Scl72Ms2wxkZx4yZPdqSCrOqBqdsA=
 github.com/opencontainers/go-digest v0.0.0-20170106003457-a6d0ee40d420/go.mod h1:cMLVZDEM3+U2I4VmLI6N8jQYUd2OVphdqWwCJHrFt2s=
 github.com/opencontainers/go-digest v0.0.0-20180430190053-c9281466c8b2/go.mod h1:cMLVZDEM3+U2I4VmLI6N8jQYUd2OVphdqWwCJHrFt2s=
 github.com/opencontainers/go-digest v1.0.0-rc1/go.mod h1:cMLVZDEM3+U2I4VmLI6N8jQYUd2OVphdqWwCJHrFt2s=
