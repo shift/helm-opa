@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.0.2](https://github.com/shift/helm-opa/compare/v1.0.1...v1.0.2) (2025-09-04)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/open-policy-agent/opa to v0.49.0 ([0ac3e02](https://github.com/shift/helm-opa/commit/0ac3e027bb1fbaa71bec8d9f2fbdb84f9f6585dc))
+* **deps:** update module github.com/open-policy-agent/opa to v0.49.1 ([7c5a415](https://github.com/shift/helm-opa/commit/7c5a415c65be15067e68d0c21f84323c95705288))
+* **deps:** update module github.com/open-policy-agent/opa to v0.49.2 ([84201f9](https://github.com/shift/helm-opa/commit/84201f9983da63f217ab48efbb4592ca8d6fc49d))
+* **deps:** update module github.com/open-policy-agent/opa to v0.50.0 ([ee3e0b5](https://github.com/shift/helm-opa/commit/ee3e0b5e5298efded769e4ea228261b093d1f6b8))
+* **deps:** update module github.com/open-policy-agent/opa to v0.50.1 ([e1e0fc0](https://github.com/shift/helm-opa/commit/e1e0fc026f0f04fae5482ad7bb2f1b80103183ee))
+* **deps:** update module github.com/open-policy-agent/opa to v0.50.2 ([3ac76ac](https://github.com/shift/helm-opa/commit/3ac76acd7d2ea74f216286019510c82af9c2e799))
+* **deps:** update module github.com/open-policy-agent/opa to v0.51.0 ([a921ed5](https://github.com/shift/helm-opa/commit/a921ed5a037e2ac4715cb85a3a9808e720d8992b))
+* **deps:** update module github.com/open-policy-agent/opa to v0.52.0 ([5b32952](https://github.com/shift/helm-opa/commit/5b329522b7e68819af1c0bac9f0801f9a18c2cf5))
+* **deps:** update module github.com/open-policy-agent/opa to v0.53.0 ([9e5abda](https://github.com/shift/helm-opa/commit/9e5abda2142cac502e7c8947e6c5a218d14f065d))
+* **deps:** update module github.com/open-policy-agent/opa to v0.53.1 ([8491cdb](https://github.com/shift/helm-opa/commit/8491cdbee0d20af56b99bc36dc0dc3ee0b02fba2))
+* **deps:** update module github.com/open-policy-agent/opa to v0.54.0 ([420950e](https://github.com/shift/helm-opa/commit/420950e3678f24a34cede610e8050f5c3c6a3e3d))
+* **deps:** update module github.com/spf13/cobra to v1.10.1 ([#68](https://github.com/shift/helm-opa/issues/68)) ([5a7f7ec](https://github.com/shift/helm-opa/commit/5a7f7ec63fa998dadfdcc3d7e7a2507e1466942e))
+* **deps:** update module github.com/spf13/cobra to v1.7.0 ([f1754aa](https://github.com/shift/helm-opa/commit/f1754aa6c7f55bd179d083ad1db6fc59d43d19ca))
+* **deps:** update module github.com/spf13/cobra to v1.8.0 ([a962870](https://github.com/shift/helm-opa/commit/a9628702252c17f1af35b15d8042a89d23533f80))
+* **deps:** update module github.com/spf13/cobra to v1.8.1 ([0815d44](https://github.com/shift/helm-opa/commit/0815d4471b8a7647a0c25f57a3b198c8fb292700))
+* **deps:** update module github.com/spf13/cobra to v1.9.1 ([#64](https://github.com/shift/helm-opa/issues/64)) ([2525884](https://github.com/shift/helm-opa/commit/2525884c09709242165c88901017b2316e778925))
+* **deps:** update module helm.sh/helm/v3 to v3.11.1 ([b6fe71b](https://github.com/shift/helm-opa/commit/b6fe71b7852530d0b9a316a3654af42ae2f2eff0))
+* **deps:** update module helm.sh/helm/v3 to v3.11.2 ([57baf40](https://github.com/shift/helm-opa/commit/57baf40841c9598268422780efb5dc89a2d784bc))
+* **deps:** update module helm.sh/helm/v3 to v3.11.3 ([d986d57](https://github.com/shift/helm-opa/commit/d986d579364d00e78a37e8e8cbdacb090fb7506c))
+
 ## [1.0.1](https://github.com/shift/helm-opa/compare/v1.0.0...v1.0.1) (2023-01-18)
 
 
